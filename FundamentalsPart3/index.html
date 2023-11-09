@@ -1,9 +1,9 @@
 <!--
 For now, just write each function and test the output with console.log:
-Write a function called add7 that takes one number and returns that number + 7.
-Write a function called multiply that takes 2 numbers and returns their product.
-Write a function called capitalize that takes a string and returns that string with only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
-Write a function called lastLetter that takes a string and returns the very last letter of that string: lastLetter("abcd") should return "d"
+1.Write a function called add7 that takes one number and returns that number + 7.
+2.Write a function called multiply that takes 2 numbers and returns their product.
+3.Write a function called capitalize that takes a string and returns that string with only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+4.Write a function called lastLetter that takes a string and returns the very last letter of that string: lastLetter("abcd") should return "d"
 -->
 
 <!DOCTYPE html>
@@ -14,13 +14,34 @@ Write a function called lastLetter that takes a string and returns the very last
     <title>Fundamentals Part 3</title>
 </head>
 <body>
+    <h1> Check the console </h1>
     <script>
+        // 1
         let add7 = n => n + 7;
-        console.log("This must be 10: " + add7(3));
+            console.log("This must be 10: " + add7(3));
+        // 2
         function multiply(x,y){
             return x * y;
         }
-        console.log("This must be 6: " + multiply(2,3));
+            console.log("This must be 6: " + multiply(2,3));
+        // 3
+        let capitalize = s => { 
+        
+            let x = s.charAt(0).toUpperCase()
+            let y = s.slice(1).toLowerCase()
+            return x + y;
+        
+        };
+            console.log("This must be Hello: " + capitalize("heLLo"));
+        // 4
+        function lastLetter(s){
+        
+            return s.charAt(s.length-1);
+
+        }
+            console.log("This must be d: " + lastLetter("abcd"));
+
+
     </script>
 </body>
 </html>
